@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stdCrud using fetch</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+
+<body>
+    <h1 class="text-center text-light bg-dark">GYM Memebership Management using fetch with generic fun</h1>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+
+                    <div class="card-header bg-dark">
+                        <h4 class="text-center text-light">Add Members</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="memberForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name:</label>
+                                <input type="text" id="fullName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact">Contact:</label>
+                                <input type="text" id="contact" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="memberShipType">Membership Type:</label>
+                                <select id="memberShipType" class="form-control">
+                                    <option value="select memberShip">Select Membership</option>
+
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Quarterly">Quarterly</option>
+                                    <option value="Yearly">Yearly</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="trainer">Trainer:</label>
+                                <select id="trainer" class="form-control">
+                                    <option value="Select Trainer">Select Trainer</option>
+
+                                    <option value="General">General</option>
+                                    <option value="Personal training">Personal training</option>
+                                    <option value="Cardio Special">Cardio Special</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="date">Joining Date:</label>
+                                <input type="date" id="date" class="form-control">
+                            </div>
+                            <button class="btn btn-primary btn-sm btn-block" id="addMemberdBtn">Add Members</button>
+                            <button type="button" class="btn btn-primary btn-sm btn-block d-none"
+                                id="updateMemberBtn">Update
+                                Membership</button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-dark">
+                        <h4 class="text-center text-light">GYM Members Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr.No</th>
+                                    <th>Full Name</th>
+                                    <th>Contact</th>
+                                    <th>Membership Type</th>
+                                    <th>Trainer</th>
+                                    <th>Joining Date</th>
+                                    <th>Edit</th>
+                                    <th>Remove</th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody id="memberLists">
+                                <tr>
+                                    <td>01</td>
+                                    <td>Arbaz Maniyar</td>
+                                    <td>705813300</td>
+                                    <td>Monthly</td>
+                                    <td>Personal</td>
+                                    <td>12-12-2012</td>
+                                    <td class="text-center">
+                                        <i class="fa-solid fa-pen-to-square fa-2x text-primary"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <i class="fa-solid fa-trash-can fa-2x text-danger"></i>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="spinner" class="d-none spinner">
+        <div class="spinner-border text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
