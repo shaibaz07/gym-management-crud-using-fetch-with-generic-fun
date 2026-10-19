@@ -151,7 +151,7 @@ function membersAdd(eve) {
 
 
             memberForm.reset()
-            memberLists.prepend(tr);
+            memberLists.append(tr);
             snackBar(`New Member With id:${tr.id} added successfully !!!`, "success")
 
         })
@@ -259,6 +259,10 @@ function onRemove(ele) {
                     state.membersArr.splice(Remove_Idx, 1)
                     ele.closest('tr').remove()
 
+                        let allRows = document.querySelectorAll("tbody tr td:first-child");
+                    
+                        allRows.forEach((el, idx) => (el.innerText = idx + 1));
+
                     snackBar(` Member With id:${Remove_Id} removed successfully !!!`, "success")
 
                 })
@@ -268,6 +272,9 @@ function onRemove(ele) {
                 .finally(() => {
                     hideSpinner()
                 })
+        }
+        else{
+            hideSpinner()
         }
     });
 

@@ -29,18 +29,17 @@
                         <form id="memberForm">
                             <div class="form-group">
                                 <label for="fullName">Full Name:</label>
-                                <input type="text" id="fullName" class="form-control">
+                                <input required type="text" id="fullName" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label for="contact">Contact:</label>
-                                <input type="text" id="contact" class="form-control">
+                                <input required type="number" id="contact" class="form-control">
                             </div>
 
                             <div class="form-group">
                                 <label for="memberShipType">Membership Type:</label>
-                                <select id="memberShipType" class="form-control">
-                                    <option value="select memberShip">Select Membership</option>
+                                <select required id="memberShipType" class="form-control">
 
                                     <option value="Monthly">Monthly</option>
                                     <option value="Quarterly">Quarterly</option>
@@ -51,8 +50,7 @@
 
                             <div class="form-group">
                                 <label for="trainer">Trainer:</label>
-                                <select id="trainer" class="form-control">
-                                    <option value="Select Trainer">Select Trainer</option>
+                                <select required id="trainer" class="form-control">
 
                                     <option value="General">General</option>
                                     <option value="Personal training">Personal training</option>
@@ -63,7 +61,7 @@
 
                             <div class="form-group">
                                 <label for="date">Joining Date:</label>
-                                <input type="date" id="date" class="form-control">
+                                <input required type="date" id="date" class="form-control">
                             </div>
                             <button class="btn btn-primary btn-sm btn-block" id="addMemberdBtn">Add Members</button>
                             <button type="button" class="btn btn-primary btn-sm btn-block d-none"
